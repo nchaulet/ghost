@@ -5,8 +5,9 @@
 #
 
 # Pull base image.
-FROM dockerfile/nodejs
+FROM node:0.10
 
+RUN apt-get update && apt-get install unzip
 # Install Ghost
 RUN \
   cd /tmp && \
